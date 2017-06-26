@@ -1,0 +1,1 @@
+<?php		// 首页控制器	class first	{		// 查看浏览功能 		function index()		{			// 获取所有分类			$types = DB::Table('shop_type') -> select("where pid=0 order by npath");			// echo '<pre>';			// print_r($types);die;			$n = count($types);			$show = true;			require('./view/first/index.html');		}	}	
